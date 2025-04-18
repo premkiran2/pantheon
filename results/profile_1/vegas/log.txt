@@ -1,0 +1,26 @@
+
+=== Testing vegas for 60 seconds ===
+$ /home/ubuntu/pantheon/src/wrappers/vegas.py run_first
+$ /home/ubuntu/pantheon/src/wrappers/vegas.py receiver 42591
+Attempt to set 'vegas' congestion control failed: No such file or directory
+------------------------------------------------------------
+Server listening on TCP port 42591
+TCP window size:  128 KByte (default)
+------------------------------------------------------------
+$ /home/ubuntu/pantheon/src/wrappers/vegas.py sender 127.0.0.1 42591
+Attempt to set 'vegas' congestion control failed: No such file or directory
+------------------------------------------------------------
+Client connecting to 127.0.0.1, TCP port 42591
+TCP window size: 2.50 MByte (default)
+------------------------------------------------------------
+[  1] local 127.0.0.1 port 58008 connected with 127.0.0.1 port 42591 (icwnd/mss/irtt=319/32741/17)
+[  1] local 127.0.0.1 port 42591 connected with 127.0.0.1 port 58008 (icwnd/mss/irtt=320/32768/13)
+kill_proc_group: killed process group with pgid 110877
+kill_proc_group: killed process group with pgid 110970
+[✓] Metrics written to logs/metrics_vegas_1744875212.csv
+✅ Passed all tests!
+Waiting for server threads to complete. Interrupt again to force quit.
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-59.9636 sec   188 GBytes  26.9 Gbits/sec
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-59.9708 sec   188 GBytes  26.9 Gbits/sec
